@@ -1,4 +1,5 @@
 #include <stdio.h>
+int arr[10]; //git update È®ÀÎ¿ë
 
 int main(void)
 { 
