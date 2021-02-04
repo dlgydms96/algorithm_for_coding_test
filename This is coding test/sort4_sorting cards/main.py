@@ -11,7 +11,7 @@ import sys
 n = int(sys.stdin.readline().rstrip())
 card_list=[]
 for _ in range(n):
-    card_list.append(int(sys.stdin.readline().rstrip()))
+    heapq.heappush(card_list, int(sys.stdin.readline().rstrip()))
 '''
 def grouping_cards(cards):
     cnt=0
@@ -20,10 +20,10 @@ def grouping_cards(cards):
         aft=heapq.heappop(cards)
         cnt+=(bef+aft)
         heapq.heappush(cards,bef+aft)
-        print(cnt)
-    cnt+=cards[0]
+        #print(cnt)
+    #cnt+=cards[0]
     return cnt
         
 curr=grouping_cards(card_list)
 print(curr)
-print(card_list)
+#print(card_list)
